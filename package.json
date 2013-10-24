@@ -1,9 +1,10 @@
 {
-  "name": "cloud-convert",
-  "preferGlobal": false,
-  "version": "0.1.0",
-  "author": "Shamasis Bhattacharya  <mail@shamasis.net>",
+  "name": "cloudconvert",
   "description": "API Wrapper for https://cloudconvert.org/ (https://cloudconvert.org/page/api)",
+  "version": "0.1.0",
+  "license": "MIT",
+
+  "author": "Shamasis Bhattacharya  <mail@shamasis.net>",
   "contributors": [
     {
       "name": "Shamasis Bhattacharya",
@@ -11,11 +12,13 @@
     }
   ],
 
-  "main": "./cloud-convert.js",
+  "main": "./cloudconvert.js",
+  "preferGlobal": false,
   "repository": {
     "type": "git",
     "url": "https://github.com/shamasis/cloud-convert.git"
   },
+
   "keywords": [
     "cloudconvert",
     "cloud",
@@ -25,11 +28,8 @@
   "dependencies": {
     "request":  "*"
   },
-  "devDependencies": {
-    "jsdocs":  "*",
-    "closurecompiler": "*"
-  },
-  "license": "MIT",
+  "devDependencies": {},
+
   "engines": {
     "node": ">=0.10.9"
   }

@@ -28,7 +28,13 @@
   "dependencies": {
     "request":  "*"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine-node": "*"
+  },
+
+  "scripts": {
+    "test": "jasmine-node test/"
+  },
 
   "engines": {
     "node": ">=0.10.9"

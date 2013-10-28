@@ -30,12 +30,61 @@
     "request":  "*"
   },
   "devDependencies": {
-    "jasmine-node": "*"
+    "jasmine-node": "*",
+    "jshint": "*"
   },
 
   "scripts": {
-    "test": "jasmine-node test/"
+    "test": "jshint develop/ && jasmine-node test/"
   },
+
+  "jshintConfig": {
+        "bitwise": false,
+        "camelcase": true,
+        "curly": true,
+        "eqeqeq": false,
+        "es3": true,
+        "forin": false,
+        "freeze": true,
+        "immed": true,
+        "indent": 4,
+        "latedef": true,
+        "newcap": true,
+        "noarg": true,
+        "noempty": false,
+        "nonew": false,
+        "plusplus": false,
+        "quotmark": "double",
+        "undef": true,
+        "unused": true,
+        "trailing": false,
+
+        "asi": false,
+        "boss": true,
+        "debug": false,
+        "eqnull": true,
+        "evil": false,
+        "expr": true,
+        "funcscope": false,
+        "globalstrict": false,
+        "iterator": false,
+        "lastsemic": false,
+        "laxbreak": false,
+        "laxcomma": false,
+        "loopfunc": false,
+        "multistr": false,
+        "notypeof": false,
+        "proto": false,
+        "scripturl": false,
+        "smarttabs": false,
+        "shadow": false,
+        "sub": false,
+        "supernew": false,
+
+        "browser": false,
+        "devel": false,
+        "node": true
+    },
 
   "engines": {
     "node": ">=0.10.9"

@@ -24,7 +24,7 @@
      */
     Converter = function (apiKey) {
 
-        apiKey = apiKey + E;
+        apiKey = (apiKey || E) + E;
         /**
          * Get the API key set during instantiating the converted.
          * returns {string}
@@ -48,9 +48,10 @@
                 xhr.overrideMimeType(TEXT_MIME);
             }
 
-            // Set the cloundconvert API key as AJAX header
-            xhr.setRequestHeader(API_HEADER_NAME, this.getKey());
+            // Open XHR connection to send POST data.
             xhr.open(POST, API_URL_PROCESS);
+            // Set the cloundconvert API key as AJAX header.
+            xhr.setRequestHeader(API_HEADER_NAME, this.apiKey());
             xhr.send(["inputformat=", escape(inputFormat), "&outputformat=", escape(outputFormat)].join(E));
         }
     };

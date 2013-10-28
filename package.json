@@ -1,6 +1,7 @@
 {
   "name": "cloudconvert",
-  "description": "API Wrapper for https://cloudconvert.org/ (https://cloudconvert.org/page/api)",
+  "description": "API Wrapper for cloudconvert.org",
+  "homepage": "http://cloudconvert.shamasis.net/",
   "version": "0.1.0",
   "license": "MIT",
 
@@ -16,7 +17,7 @@
   "preferGlobal": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/shamasis/cloud-convert.git"
+    "url": "https://github.com/shamasis/cloudconvert.git"
   },
 
   "keywords": [

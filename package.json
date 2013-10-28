@@ -1,0 +1,92 @@
+{
+  "name": "cloudconvert",
+  "description": "API Wrapper for cloudconvert.org",
+  "homepage": "http://cloudconvert.shamasis.net/",
+  "version": "0.1.0",
+  "license": "MIT",
+
+  "author": "Shamasis Bhattacharya  <mail@shamasis.net>",
+  "contributors": [
+    {
+      "name": "Shamasis Bhattacharya",
+      "email": "mail@shamasis.net"
+    }
+  ],
+
+  "main": "./cloudconvert.js",
+  "preferGlobal": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shamasis/cloudconvert.git"
+  },
+
+  "keywords": [
+    "cloudconvert",
+    "cloud",
+    "convert",
+    "cloudconvert.com"
+  ],
+  "dependencies": {
+    "request":  "*"
+  },
+  "devDependencies": {
+    "jasmine-node": "*",
+    "jshint": "*"
+  },
+
+  "scripts": {
+    "test": "jshint develop/ && jasmine-node test/"
+  },
+
+  "jshintConfig": {
+        "bitwise": false,
+        "camelcase": true,
+        "curly": true,
+        "eqeqeq": false,
+        "es3": true,
+        "forin": false,
+        "freeze": true,
+        "immed": true,
+        "indent": 4,
+        "latedef": true,
+        "newcap": true,
+        "noarg": true,
+        "noempty": false,
+        "nonew": false,
+        "plusplus": false,
+        "quotmark": "double",
+        "undef": true,
+        "unused": true,
+        "trailing": false,
+
+        "asi": false,
+        "boss": true,
+        "debug": false,
+        "eqnull": true,
+        "evil": false,
+        "expr": true,
+        "funcscope": false,
+        "globalstrict": false,
+        "iterator": false,
+        "lastsemic": false,
+        "laxbreak": false,
+        "laxcomma": false,
+        "loopfunc": false,
+        "multistr": false,
+        "notypeof": false,
+        "proto": false,
+        "scripturl": false,
+        "smarttabs": false,
+        "shadow": false,
+        "sub": false,
+        "supernew": false,
+
+        "browser": false,
+        "devel": false,
+        "node": true
+    },
+
+  "engines": {
+    "node": ">=0.10.9"
+  }
+}

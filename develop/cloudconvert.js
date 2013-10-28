@@ -1,11 +1,19 @@
 /**!
  * @license
  */
+/* global window: true, require: true, escape: true */
 (function () {
 
     var E = "",
+        UNDEFINED = "undefined",
+        POST = "POST",
         API_URL_PROCESS = "https://api.cloudconvert.org/process",
-        request = require("request"),
+        API_HEADER_NAME = "X-CloudConvert-ApiKey",
+        TEXT_MIME = "text/plain",
+
+        XMLHttpRequest = (typeof window === UNDEFINED ?
+            (require && require("xmlhttprequest").XMLHttpRequest) :
+            (window.XMLHttpRequest || window.ActiveXObject("Microsoft.XMLHTTP"))),
         Converter; // class
 
     /**
@@ -27,30 +35,30 @@
     };
 
     Converter.prototype = /** @lends Converter# */ {
-        start: function (processStartCallback, inputFormat, outputFormat) {
-            request({
-                uri: API_URL_PROCESS,
-                qs: {
-                    inputformat: inputFormat,
-                    outputformat: outputFormat
-                },
-                headers: {
-                    "X-CloudConvert-ApiKey": this.apiKey()
+        start: function (inputFormat, outputFormat) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if (this.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
+                    console.log(this.responseText);
                 }
-            }, function (error, response) {
-                if (!error && response.statusCode === 200) {
-                    if (typeof processStartCallback === "function") {
-                        // do stuffs here
-                    }
-                }
-            });
+            };
+
+            if (xhr.overrideMimeType) {
+                xhr.overrideMimeType(TEXT_MIME);
+            }
+
+            // Set the cloundconvert API key as AJAX header
+            xhr.setRequestHeader(API_HEADER_NAME, this.getKey());
+            xhr.open(POST, API_URL_PROCESS);
+            xhr.send(["inputformat=", escape(inputFormat), "&outputformat=", escape(outputFormat)].join(E));
         }
     };
     Converter.prototype.constructor = Converter;
 
 
-    module && (module.exports = {
+    (module || window).exports = {
         Converter: Converter
-    });
+    };
 
 }());

@@ -3,7 +3,7 @@
  */
 (function () {
 
-    var E = '',
+    var E = "",
         API_URL_PROCESS = "https://api.cloudconvert.org/process",
         request = require("request"),
         Converter; // class

@@ -31,11 +31,13 @@
   },
   "devDependencies": {
     "jasmine-node": "*",
-    "jshint": "*"
+    "jshint": "*",
+    "jsdoc": "*",
+    "closurecompiler": "*"
   },
 
   "scripts": {
-    "test": "jshint develop/ && jasmine-node test/"
+    "test": "./test/runall"
   },
 
   "jshintConfig": {

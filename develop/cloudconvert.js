@@ -1,6 +1,8 @@
 /**!
- * @license
+ * @license Node wrapper for API of cloudconvert.org
+ * Copyright (c) 2013 Shamasis Bhattacharya <mail@shamasis.net>
  */
+
 /* global window: true, require: true, escape: true */
 (function () {
 

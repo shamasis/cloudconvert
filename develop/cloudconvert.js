@@ -14,8 +14,7 @@
         TEXT_MIME = "text/plain",
 
         XMLHttpRequest = (typeof window === UNDEFINED ?
-            (require && require("xmlhttprequest").XMLHttpRequest) :
-            (window.XMLHttpRequest || window.ActiveXObject("Microsoft.XMLHTTP"))),
+            (require && require("xmlhttprequest").XMLHttpRequest) : window.XMLHttpRequest),
         Converter; // class
 
     /**
@@ -34,15 +33,18 @@
         this.apiKey = function () {
             return apiKey;
         };
+
+        this.processCount = 0;
     };
 
-    Converter.prototype = /** @lends Converter# */ {
+    Converter.prototype = /** @lends Converter @instance */ {
         start: function (inputFormat, outputFormat) {
             var xhr = new XMLHttpRequest();
 
             xhr.onreadystatechange = function() {
                 if (this.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
-                    console.log(this.responseText);
+                    /* console.log(this.responseText); */
+                    this.processCount++;
                 }
             };
 

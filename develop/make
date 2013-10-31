@@ -1,7 +1,0 @@
-ccjs ./develop/cloudconvert.js \
-    --externs=./develop/externs.js \
-    --compilation_level=SIMPLE_OPTIMIZATIONS \
-    --extra_annotation_name=todo \
-    --warning_level=VERBOSE \
-    --variable_map_output_file=./develop/closure-variable-map \
-    --variable_map_input_file=./develop/closure-variable-map > ./cloudconvert.js

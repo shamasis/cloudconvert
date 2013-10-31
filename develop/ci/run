@@ -1,0 +1,7 @@
+./develop/ci/lint
+echo " "
+./develop/ci/doc
+echo " "
+./develop/ci/make
+echo " "
+./develop/ci/test

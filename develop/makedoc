@@ -1,1 +1,0 @@
-jsdoc -c ./develop/jsdoc.conf -d ./docs/

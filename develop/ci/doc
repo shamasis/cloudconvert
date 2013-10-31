@@ -1,0 +1,5 @@
+echo "$(tput setaf 2)Generating documentation."
+echo "...$(tput sgr0)"
+
+jsdoc -c ./develop/ci/jsdoc.conf -d ./docs/
+echo "$(tput setaf 2)Finished processing jsdocs.$(tput sgr0)"

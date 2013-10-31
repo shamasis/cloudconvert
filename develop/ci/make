@@ -1,0 +1,11 @@
+echo "$(tput setaf 2)Compiling source files."
+echo "...$(tput sgr0)"
+
+ccjs ./develop/src/cloudconvert.js \
+    --externs=./develop/ci/externs.js \
+    --compilation_level=SIMPLE_OPTIMIZATIONS \
+    --extra_annotation_name=todo \
+    --warning_level=VERBOSE \
+    --variable_map_output_file=./develop/ci/closure-variable-map \
+    --variable_map_input_file=./develop/ci/closure-variable-map > ./cloudconvert.js
+echo "$(tput setaf 2)Finished processing ccjs.$(tput sgr0)"

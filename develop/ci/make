@@ -1,5 +1,5 @@
-echo "$(tput setaf 2)Compiling source files."
-echo "...$(tput sgr0)"
+echo "Compiling source files."
+echo "..."
 
 ccjs ./develop/src/cloudconvert.js \
     --externs=./develop/ci/externs.js \
@@ -8,4 +8,4 @@ ccjs ./develop/src/cloudconvert.js \
     --warning_level=VERBOSE \
     --variable_map_output_file=./develop/ci/closure-variable-map \
     --variable_map_input_file=./develop/ci/closure-variable-map > ./cloudconvert.js
-echo "$(tput setaf 2)Finished processing ccjs.$(tput sgr0)"
+echo "Finished processing ccjs."

@@ -1,5 +1,5 @@
-echo "$(tput setaf 2)Linting source files."
+echo "Linting source files."
 echo "...$(tput sgr0)"
 
 jshint ./develop/src/
-echo "$(tput setaf 2)Finished processing jshint.$(tput sgr0)"
+echo "Finished processing jshint."

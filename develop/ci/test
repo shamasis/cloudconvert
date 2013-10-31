@@ -1,3 +1,5 @@
-echo "$(tput setaf 2)Running tests.$(tput sgr0)"
+tput setaf 2
+echo "Running tests."
+tput sgr0
 
 jasmine-node ./test/

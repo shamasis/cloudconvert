@@ -27,7 +27,7 @@
     "cloudconvert.com"
   ],
   "dependencies": {
-    "request":  "*"
+    "request":  ">=2.87.0"
   },
   "devDependencies": {
     "jasmine-node": "*",

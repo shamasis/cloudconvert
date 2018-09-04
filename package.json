@@ -30,7 +30,7 @@
     "request":  "*"
   },
   "devDependencies": {
-    "jasmine-node": "*",
+    "jasmine-node": ">=1.16.1",
     "jshint": "*"
   },
 
